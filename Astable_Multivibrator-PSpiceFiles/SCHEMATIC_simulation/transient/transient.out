@@ -1,0 +1,165 @@
+
+**** 12/15/22 20:14:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC_simulation-transient"  [ C:\Users\JP - Vision Metering\Desktop\OrCAD Training 3\Astable_Multivibrator-PSpiceF
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC_simulation.net" 
+
+
+
+**** INCLUDING SCHEMATIC_simulation.net ****
+* source ASTABLE_MULTIVIBRATOR
+R_R3         Q2_B VCC  470k TC=0,0 
+R_R4         Q2_C N001200  5k TC=0,0 
+V_V1         VCC 0 9Vdc
+R_R1         Q1_C N002240  5k TC=0,0 
+R_R2         Q1_B VCC  470k TC=0,0 
+C_C1         Q2_B Q1_C  0.47uF  TC=0,0 
+C_C2         Q2_C Q1_B  0.47uF  TC=0,0 
+D_D1         VCC N002240 LW_541C-TYP 
+D_D2         VCC N001200 LW_541C-TYP 
+Q_Q1         Q1_C Q1_B 0 MPS2222
+Q_Q2         Q2_C Q2_B 0 MPS2222
+
+**** RESUMING transient.cir ****
+.END
+
+**** 12/15/22 20:14:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC_simulation-transient"  [ C:\Users\JP - Vision Metering\Desktop\OrCAD Training 3\Astable_Multivibrator-PSpiceF
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               LW_541C-TYP     
+          IS  414.480000E-15 
+           N    5            
+          RS   22.499        
+
+
+**** 12/15/22 20:14:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC_simulation-transient"  [ C:\Users\JP - Vision Metering\Desktop\OrCAD Training 3\Astable_Multivibrator-PSpiceF
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MPS2222         
+               NPN             
+       LEVEL    1            
+          IS    3.063000E-15 
+          BF    4.262000E+03 
+          NF    1            
+         VAF   67.62         
+         IKF     .1868       
+         ISE    3.063000E-15 
+          NE    1.23         
+          BR    7.489        
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC     .4          
+         CJE   24.650000E-12 
+         VJE     .75         
+         MJE     .3824       
+         CJC   11.250000E-12 
+         VJC     .75         
+         MJC     .3978       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  427.600000E-12 
+         XTF   20            
+         VTF   10            
+         ITF     .4          
+          TR   37.640000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/15/22 20:14:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC_simulation-transient"  [ C:\Users\JP - Vision Metering\Desktop\OrCAD Training 3\Astable_Multivibrator-PSpiceF
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    9.0000  ( Q1_B)     .6928  ( Q1_C)     .0783  ( Q2_B)     .6928      
+
+( Q2_C)     .0783  (N001200)    6.1536                   (N002240)    6.1536    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.465E-03
+
+    TOTAL POWER DISSIPATION   2.22E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/15/22 20:14:59 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC_simulation-transient"  [ C:\Users\JP - Vision Metering\Desktop\OrCAD Training 3\Astable_Multivibrator-PSpiceF
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        2.53
+  Total job time (using Solver 1)   =         .36
+

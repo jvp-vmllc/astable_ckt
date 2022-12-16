@@ -1,0 +1,12 @@
+* source ASTABLE_MULTIVIBRATOR
+R_R3         Q2_B VCC  470k TC=0,0 
+R_R4         Q2_C N001200  5k TC=0,0 
+V_V1         VCC 0 9Vdc
+R_R1         Q1_C N002240  5k TC=0,0 
+R_R2         Q1_B VCC  470k TC=0,0 
+C_C1         Q2_B Q1_C  0.47uF  TC=0,0 
+C_C2         Q2_C Q1_B  0.47uF  TC=0,0 
+D_D1         VCC N002240 LW_541C-TYP 
+D_D2         VCC N001200 LW_541C-TYP 
+Q_Q1         Q1_C Q1_B 0 MPS2222
+Q_Q2         Q2_C Q2_B 0 MPS2222
